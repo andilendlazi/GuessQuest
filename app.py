@@ -5,7 +5,7 @@ import random
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Secret key needed to use Flask sessions
-
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgres://ua602kemfc2gnv:p8b0cfe5ee72194ee70d51da9ba2fdd2070a3f2f1bc51df6152818e37be9a572a@cat670aihdrkt1.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d75dknedhqdc70 "
 def load_category(category):
     data_dict = {}
     file_path = os.path.join("data", f"{category}.json")
